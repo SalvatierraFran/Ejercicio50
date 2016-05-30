@@ -19,8 +19,10 @@ namespace ConsoleApplication1
         }
 
         /*Constructor*/
-        public Pasajero()
-        { }
+        public Pasajero(eTipoPasajero TipoDePasajero)
+        {
+            this._TipoDePasajero = TipoDePasajero;
+        }
     }
 
     public enum eTipoPasajero

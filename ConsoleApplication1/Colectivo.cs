@@ -14,13 +14,18 @@ namespace ConsoleApplication1
         private int _numeroDeMovil;
 
         /*Constructor*/
-        public Colectivo()
-        { }
+        public Colectivo(int NumeroDeLinea, int NumeroDeMovil)
+        {
+            this._numeroDeLinea = NumeroDeLinea;
+            this._numeroDeMovil = NumeroDeMovil;
+
+            this._listPasajeros = new List<Pasajero>();
+        }
 
         /*Metodos*/
-        public abstract void SacarBoleto();
+        public abstract void SacarBoleto(Pasajero unPasajero);
 
-        public abstract void SolicitanBajar();
+        public abstract void SolicitanBajar(Pasajero unPasajero);
 
         public abstract string ToString();
     }
